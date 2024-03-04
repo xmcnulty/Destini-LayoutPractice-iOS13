@@ -23,13 +23,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fMx-Jm-wdQ">
                                 <rect key="frame" x="10" y="48" width="394" height="814"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MkR-wT-Ky9">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story Text" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MkR-wT-Ky9">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="574"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhm-rO-Pit" userLabel="Choice 1 Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="hhm-rO-Pit" userLabel="Choice 1 Button">
                                         <rect key="frame" x="0.0" y="594" width="394" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="4r3-dI-Zro"/>
@@ -40,8 +40,11 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="23"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="choice1ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J1U-r7-7bQ"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuH-54-JlX" userLabel="Choice 2 Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="NuH-54-JlX" userLabel="Choice 2 Button">
                                         <rect key="frame" x="0.0" y="714" width="394" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="cdJ-1j-LUy"/>
@@ -52,6 +55,9 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="23"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="choice2ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iEC-Na-cGQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -69,6 +75,11 @@
                             <constraint firstAttribute="bottom" secondItem="kP0-Wr-Hrf" secondAttribute="bottom" id="oqZ-tn-qpA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="choice1Button" destination="hhm-rO-Pit" id="glZ-ug-fvR"/>
+                        <outlet property="choice2Button" destination="NuH-54-JlX" id="AJI-S1-dmy"/>
+                        <outlet property="storyText" destination="MkR-wT-Ky9" id="Dqn-J6-JF6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
